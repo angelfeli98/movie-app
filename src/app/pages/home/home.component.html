@@ -1,0 +1,10 @@
+
+<h2> Billboard </h2>
+<div *ngIf="movies">
+    <app-slideshow [movies]="movies"></app-slideshow>
+</div>
+
+<h2> Movies </h2>
+<div *ngIf="movies">
+    <app-movie-grid [movies]="movies"></app-movie-grid>
+</div>

@@ -1,0 +1,16 @@
+
+
+<div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div *ngFor="let character of cast" class="swiper-slide mt-4">
+            <img class="cast-img img-fluid poster" [src]="character.profile_path | poster" [alt]="character.name">
+            <div class="actor-info"> {{ character.name }} </div>
+        </div>
+    </div>
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</div>

@@ -1,0 +1,28 @@
+
+
+<div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div
+            *ngFor="let movie of getMovies"
+            [ngStyle]="{ 'background-size': 'cover', 'background-image': 'url(https://image.tmdb.org/t/p/w500/'+ movie.backdrop_path +')', 'cursor': 'pointer' }"
+            class="swiper-slide"
+            [routerLink]="['/movie', movie.id]"
+        >
+            <div class="movie-title">
+                <p class="title"> {{ movie.title }} </p>
+                <p class="description"> {{ movie.overview | movieDes }} </p>
+            </div>
+        </div>
+    </div>
+    <!-- If we need pagination -->
+    <!-- <div class="swiper-pagination"></div> -->
+
+    <!-- If we need navigation buttons -->
+    <div (click)="prevSlide()" class="swiper-button-prev"></div>
+    <div (click)="nextSlide()" class="swiper-button-next"></div>
+
+    <!-- If we need scrollbar -->
+    <!-- <div class="swiper-scrollbar"></div> -->
+</div>

@@ -1,0 +1,30 @@
+
+.movie-card{
+    margin-bottom: 20px;
+    height: 500px;
+    border: none;
+}
+
+.card-body{
+    background-color: #14161E !important;
+    color: white;
+    height: 100px;
+    text-align: justify;
+    width: auto;
+}
+
+.movie-title{
+    text-align: center;
+}
+
+.card-body p{
+    font-size: 15px;
+}
+
+.img-poster{
+    height: 400px;
+    cursor: pointer;
+    width: auto;
+    border: 3px solid white;
+    border-radius: 10px;
+}

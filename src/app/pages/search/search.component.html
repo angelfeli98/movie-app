@@ -1,0 +1,12 @@
+
+<div *ngIf="movies || movies.length !== 0">
+    <app-movie-grid [movies]="movies"></app-movie-grid>
+</div>
+
+<div class="empty-alert" *ngIf="field === ''">
+    <p class="info-empty"> Search movies ...</p>
+</div>
+
+<div *ngIf="movies.length === 0 && field !== ''" class="alert alert-warning" role="alert">
+    A simple danger alert—check it out!
+</div>
